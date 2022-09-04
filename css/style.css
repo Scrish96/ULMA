@@ -153,3 +153,10 @@
 .contenedor #prev{
 	left:0;
 }
+
+@media (min-width:720px){
+	.contenedor .slide-contenedor .slide video{
+		width:100%;
+	}
+	
+}
