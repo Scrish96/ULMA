@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>DEMO</title>
+	</head>
+	<body>
+		<div class="contenedor">
+			<div id="logo">
+				<img src="images/logo.png" alt="logo-ulma-peru" />
+			</div>
+			<div class="slide-contenedor active">
+				<div class="slide">
+					<div class="contenido">
+						<h3>Bienvenidos</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+							excepturi necessitatibus perferendis dignissimos in molestias
+							eveniet temporibus voluptas saepe, unde inventore quo distinctio
+							nostrum, nobis reprehenderit explicabo illo?
+						</p>
+						<a href="#" class="btn">Visítanos</a>
+					</div>
+					<video src="images/video1.mp4" muted autoplay loop></video>
+				</div>
+			</div>
+
+			<div class="slide-contenedor">
+				<div class="slide">
+					<div class="contenido">
+						<h3>ULMA PERÚ</h3>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+							rerum corrupti modi eius, minima consequuntur voluptatum iusto
+							rem perspiciatis explicabo?
+						</p>
+						<a href="#" class="btn">Visítanos</a>
+					</div>
+					<video src="images/video2.mp4" muted autoplay loop></video>
+				</div>
+			</div>
+
+			<div class="slide-contenedor">
+				<div class="slide">
+					<div class="contenido">
+						<h3>ULMA PERÚ</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis et
+							totam repudiandae quibusdam ut sapiente, numquam quae animi magni
+							aspernatur vitae impedit at, tempora unde?
+						</p>
+						<a href="#" class="btn">Visítanos</a>
+					</div>
+					<video src="images/video3.mp4" muted autoplay loop></video>
+				</div>
+			</div>
+
+			<div class="slide-contenedor">
+				<div class="slide">
+					<div class="contenido">
+						<h3>ULMA PERÚ</h3>
+						<p>
+							Cuando compras ULMA, estás comprando productos de calidad y un
+							servicio excepcional de un referente mundial de la industria.
+						</p>
+						<a href="#" class="btn">Visítanos</a>
+					</div>
+					<video src="images/video4.mp4" muted autoplay loop></video>
+				</div>
+			</div>
+
+			<div class="slide-contenedor">
+				<div class="slide">
+					<div class="contenido">
+						<h3>ULMA PERÚ</h3>
+						<p>
+							Cuando compras ULMA, estás comprando productos de calidad y un
+							servicio excepcional de un referente mundial de la industria.
+						</p>
+						<a href="https://www.ulmaconstruction.com.pe/es-pe" class="btn"
+							>Visítanos</a
+						>
+					</div>
+					<video src="images/video5.mp4" muted autoplay loop></video>
+				</div>
+			</div>
+
+			<div id="next" onclick="next()">></div>
+			<div id="prev" onclick="prev()"><</div>
+		</div>
+		<script>
+			let slides = document.querySelectorAll('.slide-contenedor');
+			let index = 0;
+
+			function next() {
+				slides[index].classList.remove('active');
+				index = (index + 1) % slides.length;
+				slides[index].classList.add('active');
+			}
+
+			function prev() {
+				slides[index].classList.remove('active');
+				index = (index - 1 + slides.length) % slides.length;
+				slides[index].classList.add('active');
+			}
+		</script>
+	</body>
+</html>
